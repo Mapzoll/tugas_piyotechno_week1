@@ -10,16 +10,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$pesan = 'Masukkan nilai angka antara 0 dan 100.';
 	} else {
 		$angka = (float) $nilai;
-		if ($angka >= 80) {
-			$huruf = 'A';
-		} elseif ($angka >= 70) {
-			$huruf = 'B';
-		} elseif ($angka >= 60) {
-			$huruf = 'C';
-		} elseif ($angka >= 50) {
+		if ($angka >= 50 && $angka < 60) {
+			$huruf = 'E'; 
+		} elseif ($angka >= 60 && $angka < 65) {
 			$huruf = 'D';
-		} else {
-			$huruf = 'E';
+		} elseif ($angka >= 65 && $angka < 70) {
+			$huruf = 'C';
+		} elseif ($angka >= 70 && $angka < 80) {
+			$huruf = 'B';
+		} elseif ($angka >= 80 && $angka <= 100) {
+			$huruf = 'A';
 		}
 	}
 }

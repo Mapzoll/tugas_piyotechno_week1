@@ -3,8 +3,10 @@ $panjang = 10;
 $lebar = 5;
 
 $luas = $panjang * $lebar;
+$bagi = $panjang / $lebar;
 $keliling = 2 * ($panjang + $lebar);
 
 echo "Luas Persegi Panjang: $luas \n";
+echo "Hasil bagi: $bagi \n";
 echo "Keliling Persegi Panjang: $keliling \n";
 ?>

@@ -1,23 +1,21 @@
 <?php
 function cekBilanganPrima($n) {
+    // Angka kurang dari atau sama dengan 1 bukan bilangan prima
     if ($n <= 1) {
-        return false;
+        return "$n bukan bilangan prima.";
     }
-    for ($i = 2; $i <= sqrt($n); $i++) {
+
+    // Cek pembagian dari angka 2 sampai $n - 1
+    for ($i = 2; $i < $n; $i++) {
         if ($n % $i == 0) {
-            return false;
+            return "$n bukan bilangan prima (habis dibagi $i).";
         }
     }
-    return true;
+
+    return "$n adalah bilangan prima.";
 }
-echo "Program Cek Bilangan Prima \n";
-echo "Masukkan angka yang ingin dicek: ";
-$input = fgets(STDIN);
-$angka = intval(trim($input));
-echo "\nHasil\n";
-if (cekBilanganPrima($angka)) {
-    echo "Angka $angka adalah BILANGAN PRIMA.\n";
-} else {
-    echo "Angka $angka BUKAN bilangan prima.\n";
-}
+
+// Contoh penggunaan:
+$angka = 97;
+echo cekBilanganPrima($angka);
 ?>

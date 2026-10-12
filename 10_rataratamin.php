@@ -8,3 +8,4 @@ $minimum = min($angka);
 echo "Rata-rata: $rataRata\n";
 echo "Maksimum: $maksimum\n";
 echo "Minimum: $minimum\n";
+?>

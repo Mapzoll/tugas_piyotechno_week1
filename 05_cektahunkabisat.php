@@ -1,14 +1,11 @@
 <?php
 function isKabisat($tahun) {
-    if ($tahun % 400 == 0) {
-        return true;
-    } elseif ($tahun % 100 == 0) {
-        return false;
-    } elseif ($tahun % 4 == 0) {
+    if ($tahun % 4 == 0) {
         return true;
     }
-
-    return false;
+    else {
+        return false;
+    }
 }
 
 ?>
